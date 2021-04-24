@@ -26,8 +26,63 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
     }
     
     func getArticles() {
+        print("perform NewsViewModelImpl.getArticles")
+        self.state = .loading
         
+        let cancellable = service.request(from: .getNews)
+            .sink { (res) in
+                switch res {
+                
+                case .finished:
+                    //send back the articles
+                    print("sink success")
+                    self.state = .success(content: self.articles)
+                case .failure(let error):
+                    //send back the error
+                    print("fail: \(error.localizedDescription)")
+                    self.state = .failed(error: error)
+                }
+            } receiveValue: { (response) in
+                self.articles = response.articles
+            }
+        self.cancellables.insert(cancellable)
+
     }
     
-    
+    func getNews() {
+        let urlstringg = "https://api.lil.software/news"
+        let apiService = APIService.shared
+        apiService.getJSON(urlString: urlstringg) { (result: Result<NewsResponse, APIError>) in
+            switch result {
+            
+            case .success(let artic):
+                self.state = .success(content: self.articles)
+                self.articles = artic.articles
+            case .failure(let apierror):
+                switch apierror {
+                case .error(_):
+                    DispatchQueue.main.async {
+                        self.state = .failed(error: apierror)
+                        print(apierror.errorDescription!)
+                    }
+                    
+                case .decodingEror:
+                    DispatchQueue.main.async {
+                        self.state = .failed(error: apierror)
+                        print(apierror.errorDescription!)
+                    }
+                case .errorCode(_):
+                    DispatchQueue.main.async {
+                    self.state = .failed(error: apierror)
+                    print(apierror.errorDescription!)
+                }
+                case .unknown:
+                    DispatchQueue.main.async {
+                        self.state = .failed(error: apierror)
+                        print(apierror.errorDescription!)
+                    }
+                }
+            }
+        }
+    }
 }

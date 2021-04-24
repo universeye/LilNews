@@ -14,6 +14,8 @@ protocol NewsService {
 
 struct NewsServiceImpl: NewsService {
     func request(from endpoint: NewsAPI) -> AnyPublisher<NewsResponse, APIError> {
+        print("Perform NewsServiceImpl.request")
+        print("getting articles from \(endpoint.baseurl)")
         return URLSession
             .shared
             .dataTaskPublisher(for: endpoint.urlRequest)
@@ -25,13 +27,18 @@ struct NewsServiceImpl: NewsService {
                 }
                 
                 if (200...299).contains(response.statusCode) {
+                    print(response.statusCode)
                     let jsonDecoder = JSONDecoder()
                     jsonDecoder.dateDecodingStrategy = .iso8601
                     return Just(data)
                         .decode(type: NewsResponse.self, decoder: jsonDecoder)
-                        .mapError { _ in APIError.decodingEror}
-                        .eraseToAnyPublisher()
+                        .mapError { _ in
+                            print("error herrrre")
+                            print(data)
+                            return APIError.decodingEror}
+                        .eraseToAnyPublisher()            
                 } else {
+                    print("error here")
                     return Fail(error: APIError.errorCode(response.statusCode)).eraseToAnyPublisher()
                 }
             }

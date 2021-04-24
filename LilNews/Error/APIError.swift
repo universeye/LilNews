@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum APIError: Error {
+ enum APIError: Error {
+    case error(_ errorString: String)
     case decodingEror
     case errorCode(Int)
     case unknown
 }
-
 
 
 extension APIError: LocalizedError {
@@ -24,6 +24,8 @@ extension APIError: LocalizedError {
             return "\(code) - Something went wrong!"
         case .unknown:
             return "The error is unknown"
+        case .error(_):
+            return "Error happened"
         }
     }
 }

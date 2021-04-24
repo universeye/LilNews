@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		BF0C99882633120D005DCDA6 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C99872633120D005DCDA6 /* NewsViewModel.swift */; };
+		BF0C999126331D7B005DCDA6 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = BF0C999026331D7B005DCDA6 /* URLImage */; };
+		BF0C999626331DCE005DCDA6 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C999526331DCE005DCDA6 /* ArticleView.swift */; };
+		BF0C999B26331E56005DCDA6 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C999A26331E56005DCDA6 /* MyView.swift */; };
+		BF0C99A02633D3CC005DCDA6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C999F2633D3CC005DCDA6 /* ErrorView.swift */; };
+		BF40C6AA2633F90E007A2A4D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40C6A92633F90E007A2A4D /* APIService.swift */; };
 		BF61077A2632977000FF485E /* LilNewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6107792632977000FF485E /* LilNewsApp.swift */; };
 		BF61077C2632977000FF485E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61077B2632977000FF485E /* ContentView.swift */; };
 		BF61077E2632977300FF485E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF61077D2632977300FF485E /* Assets.xcassets */; };
@@ -40,6 +45,10 @@
 
 /* Begin PBXFileReference section */
 		BF0C99872633120D005DCDA6 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		BF0C999526331DCE005DCDA6 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		BF0C999A26331E56005DCDA6 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		BF0C999F2633D3CC005DCDA6 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		BF40C6A92633F90E007A2A4D /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		BF6107762632977000FF485E /* LilNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LilNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6107792632977000FF485E /* LilNewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilNewsApp.swift; sourceTree = "<group>"; };
 		BF61077B2632977000FF485E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0C999126331D7B005DCDA6 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +134,7 @@
 				BF6107A82632978600FF485E /* Models */,
 				BF6107A72632978100FF485E /* Views */,
 				BF61077D2632977300FF485E /* Assets.xcassets */,
+				BF0C999A26331E56005DCDA6 /* MyView.swift */,
 				BF6107822632977300FF485E /* Info.plist */,
 				BF61077F2632977300FF485E /* Preview Content */,
 			);
@@ -160,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				BF61077B2632977000FF485E /* ContentView.swift */,
+				BF0C999526331DCE005DCDA6 /* ArticleView.swift */,
+				BF0C999F2633D3CC005DCDA6 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +204,7 @@
 		BF6107C326329A2700FF485E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BF40C6A92633F90E007A2A4D /* APIService.swift */,
 				BF6107C426329A3200FF485E /* NewsService.swift */,
 			);
 			path = Service;
@@ -220,6 +234,9 @@
 			dependencies = (
 			);
 			name = LilNews;
+			packageProductDependencies = (
+				BF0C999026331D7B005DCDA6 /* URLImage */,
+			);
 			productName = LilNews;
 			productReference = BF6107762632977000FF485E /* LilNews.app */;
 			productType = "com.apple.product-type.application";
@@ -291,6 +308,9 @@
 				Base,
 			);
 			mainGroup = BF61076D2632977000FF485E;
+			packageReferences = (
+				BF0C998F26331D7B005DCDA6 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = BF6107772632977000FF485E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -335,12 +355,16 @@
 			files = (
 				BF6107D12633116600FF485E /* ResultState.swift in Sources */,
 				BF6107C526329A3200FF485E /* NewsService.swift in Sources */,
+				BF0C999B26331E56005DCDA6 /* MyView.swift in Sources */,
 				BF61077C2632977000FF485E /* ContentView.swift in Sources */,
 				BF61077A2632977000FF485E /* LilNewsApp.swift in Sources */,
 				BF6107AB2632979F00FF485E /* NewsResponse.swift in Sources */,
 				BF6107B92632995100FF485E /* APIError.swift in Sources */,
 				BF6107B3263297EE00FF485E /* NewsEndPoint.swift in Sources */,
+				BF0C999626331DCE005DCDA6 /* ArticleView.swift in Sources */,
 				BF0C99882633120D005DCDA6 /* NewsViewModel.swift in Sources */,
+				BF40C6AA2633F90E007A2A4D /* APIService.swift in Sources */,
+				BF0C99A02633D3CC005DCDA6 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +684,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF0C998F26331D7B005DCDA6 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF0C999026331D7B005DCDA6 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF0C998F26331D7B005DCDA6 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF61076E2632977000FF485E /* Project object */;
 }
