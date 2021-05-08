@@ -12,7 +12,7 @@ struct ArticleView: View {
     
     let articles: NewsResponse.Articles
     @State private var isShowingSheet = false
-    @State private var isLoading = true
+    @State var isLoading: Bool
     
     var body: some View {
         HStack(spacing: 10) {
@@ -40,6 +40,7 @@ struct ArticleView: View {
             } else {
                 placeHolderImageView()
             }
+            
             VStack (alignment: .leading, spacing: 4) {
                 Text(articles.title)
                     .foregroundColor(Color.black)
@@ -72,14 +73,16 @@ struct ArticleView: View {
             }
         }
         .padding(.horizontal, 10)
+        .redacted(reason: isLoading ? .placeholder : [])
+        .allowsHitTesting(!isLoading)
     }
 }
 
-//struct ArticleView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ArticleView(articles: NewsResponse.testArticles).previewLayout(.sizeThatFits)
-//    }
-//}
+struct ArticleView_Previews: PreviewProvider {
+    static var previews: some View {
+        ArticleView(articles: NewsResponse.testArticles[0], isLoading: false).previewLayout(.sizeThatFits)
+    }
+}
 
 
 struct placeHolderImageView: View {

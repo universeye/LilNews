@@ -10,10 +10,15 @@ import Combine
 
 protocol NewsViewModel {
     func getArticles()
+    var isLoading: Bool { get }
 }
 
 
 class NewsViewModelImpl: ObservableObject, NewsViewModel {
+    var isLoading: Bool {
+        state == .loading
+    }
+    
     
     private let service: NewsService
     
@@ -27,6 +32,7 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
     
     func getArticles() {
         print("perform NewsViewModelImpl.getArticles")
+        print("Loading...")
         self.state = .loading
         
         let cancellable = service.request(from: .getNews)
