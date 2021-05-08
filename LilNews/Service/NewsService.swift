@@ -15,7 +15,7 @@ protocol NewsService {
 struct NewsServiceImpl: NewsService {
     func request(from endpoint: NewsAPI) -> AnyPublisher<NewsResponse, APIError> {
         print("Perform NewsServiceImpl.request")
-        print("getting articles from \(endpoint.baseurl)")
+        print("getting articles from \(endpoint.urlRequest)")
         return URLSession
             .shared
             .dataTaskPublisher(for: endpoint.urlRequest)

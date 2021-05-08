@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     
     @StateObject var viewModel = NewsViewModelImpl(service: NewsServiceImpl())
-    
+   
     var body: some View {
+        NavigationView {
         Group {
             switch viewModel.state {
             case .loading:
@@ -19,25 +20,28 @@ struct ContentView: View {
             case .failed(let error):
                 ErrorView(error: error, handler: viewModel.getArticles)
             case .success(let articles):
-                NavigationView {
+                
                     List {
-                        ForEach(0..<articles.count) { i in
-                            ArticleView(articles:viewModel.articles[i])
+                        ForEach(articles, id: \.self) { article in
+                            ArticleView(articles: article)
+                                
+                                
                         }
                     }
                     .listStyle(PlainListStyle())
                     .navigationTitle("News")
-                }
+                
             }
         }
+        }
         .onAppear {
-            viewModel.getNews()
+            viewModel.getArticles()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }

@@ -11,6 +11,8 @@ import URLImage
 struct ArticleView: View {
     
     let articles: NewsResponse.Articles
+    @State private var isShowingSheet = false
+    @State private var isLoading = true
     
     var body: some View {
         HStack(spacing: 10) {
@@ -18,7 +20,7 @@ struct ArticleView: View {
             if let imgURL = articles.image {
                 URLImage(url: imgURL,
                          options: URLImageOptions(
-                            identifier: articles.id.uuidString,
+                            //identifier: articles.id.uuidString,
                             cachePolicy: .returnCacheElseLoad(cacheDelay: nil, downloadDelay: 0.25)),
                          failure: { error, retry in         // Display error and retry button
                             VStack {
@@ -40,28 +42,50 @@ struct ArticleView: View {
             }
             VStack (alignment: .leading, spacing: 4) {
                 Text(articles.title)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color.black)
                     .font(.system(size: 18, weight: .semibold))
+                    .truncationMode(.tail)
+                    .minimumScaleFactor(0.9)
+                    .lineLimit(3)
                 Text(articles.source)
                     .foregroundColor(.gray)
                     .font(.footnote)
+                
+                if let date = articles.date {
+                    HStack {
+                        Text(date, style: .date)
+                            .font(.system(size: 12, weight: .bold))
+                            .foregroundColor(.gray)
+                        Text(date, style: .time)
+                            .foregroundColor(.gray)
+                            .font(.system(size: 12))
+                    }
+                    
+                }
+                
+            }
+            .onTapGesture {
+                isShowingSheet.toggle()
+            }
+            .sheet(isPresented: $isShowingSheet) {
+                SFSafariView(url: articles.url)
             }
         }
         .padding(.horizontal, 10)
     }
 }
 
-struct ArticleView_Previews: PreviewProvider {
-    static var previews: some View {
-        ArticleView(articles: NewsResponse.testArticles).previewLayout(.sizeThatFits)
-    }
-}
+//struct ArticleView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ArticleView(articles: NewsResponse.testArticles).previewLayout(.sizeThatFits)
+//    }
+//}
 
 
 struct placeHolderImageView: View {
     var body: some View {
         VStack {
-            Image(systemName: "photo.fill")
+            SFSymbols.placeholderImage
                 .foregroundColor(.white)
                 .background(Color.gray)
                 .frame(width: 100, height: 100)

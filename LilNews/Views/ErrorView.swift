@@ -23,7 +23,7 @@ struct ErrorView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "exclamationmark.icloud.fill")
+            SFSymbols.error
                 .foregroundColor(.gray)
                 .font(.system(size: 50, weight: .heavy))
                 .padding(.bottom, 4)

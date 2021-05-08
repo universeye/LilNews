@@ -14,7 +14,7 @@
 		BF0C99A02633D3CC005DCDA6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C999F2633D3CC005DCDA6 /* ErrorView.swift */; };
 		BF40C6AA2633F90E007A2A4D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40C6A92633F90E007A2A4D /* APIService.swift */; };
 		BF61077A2632977000FF485E /* LilNewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6107792632977000FF485E /* LilNewsApp.swift */; };
-		BF61077C2632977000FF485E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61077B2632977000FF485E /* ContentView.swift */; };
+		BF61077C2632977000FF485E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61077B2632977000FF485E /* HomeView.swift */; };
 		BF61077E2632977300FF485E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF61077D2632977300FF485E /* Assets.xcassets */; };
 		BF6107812632977300FF485E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6107802632977300FF485E /* Preview Assets.xcassets */; };
 		BF61078C2632977300FF485E /* LilNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61078B2632977300FF485E /* LilNewsTests.swift */; };
@@ -24,6 +24,11 @@
 		BF6107B92632995100FF485E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6107B82632995100FF485E /* APIError.swift */; };
 		BF6107C526329A3200FF485E /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6107C426329A3200FF485E /* NewsService.swift */; };
 		BF6107D12633116600FF485E /* ResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6107D02633116600FF485E /* ResultState.swift */; };
+		BF7CF6532646400B00F6C9D2 /* SFSafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6522646400B00F6C9D2 /* SFSafariView.swift */; };
+		BF7CF655264644FC00F6C9D2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF654264644FC00F6C9D2 /* MainView.swift */; };
+		BF7CF6572646453500F6C9D2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6562646453500F6C9D2 /* SettingsView.swift */; };
+		BF7CF65A2646456800F6C9D2 /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6592646456800F6C9D2 /* SFSymbols.swift */; };
+		BF7CF65C264646F300F6C9D2 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF65B264646F300F6C9D2 /* HomeView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +56,7 @@
 		BF40C6A92633F90E007A2A4D /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		BF6107762632977000FF485E /* LilNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LilNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6107792632977000FF485E /* LilNewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilNewsApp.swift; sourceTree = "<group>"; };
-		BF61077B2632977000FF485E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BF61077B2632977000FF485E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BF61077D2632977300FF485E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF6107802632977300FF485E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF6107822632977300FF485E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +71,11 @@
 		BF6107B82632995100FF485E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		BF6107C426329A3200FF485E /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		BF6107D02633116600FF485E /* ResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultState.swift; sourceTree = "<group>"; };
+		BF7CF6522646400B00F6C9D2 /* SFSafariView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSafariView.swift; sourceTree = "<group>"; };
+		BF7CF654264644FC00F6C9D2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		BF7CF6562646453500F6C9D2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BF7CF6592646456800F6C9D2 /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
+		BF7CF65B264646F300F6C9D2 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +135,7 @@
 		BF6107782632977000FF485E /* LilNews */ = {
 			isa = PBXGroup;
 			children = (
-				BF6107792632977000FF485E /* LilNewsApp.swift */,
+				BF7CF6582646455C00F6C9D2 /* Utilities */,
 				BF0C9986263311F8005DCDA6 /* ViewModel */,
 				BF6107CF2633115400FF485E /* States */,
 				BF6107C326329A2700FF485E /* Service */,
@@ -133,8 +143,8 @@
 				BF6107A92632978B00FF485E /* EndPoint */,
 				BF6107A82632978600FF485E /* Models */,
 				BF6107A72632978100FF485E /* Views */,
-				BF61077D2632977300FF485E /* Assets.xcassets */,
-				BF0C999A26331E56005DCDA6 /* MyView.swift */,
+				BF7A37132637FA2D003DB437 /* Support */,
+				BF7A37122637FA1F003DB437 /* Testing */,
 				BF6107822632977300FF485E /* Info.plist */,
 				BF61077F2632977300FF485E /* Preview Content */,
 			);
@@ -170,9 +180,12 @@
 		BF6107A72632978100FF485E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BF61077B2632977000FF485E /* ContentView.swift */,
+				BF7CF654264644FC00F6C9D2 /* MainView.swift */,
+				BF61077B2632977000FF485E /* HomeView.swift */,
+				BF7CF6562646453500F6C9D2 /* SettingsView.swift */,
 				BF0C999526331DCE005DCDA6 /* ArticleView.swift */,
 				BF0C999F2633D3CC005DCDA6 /* ErrorView.swift */,
+				BF7CF6522646400B00F6C9D2 /* SFSafariView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,7 +217,6 @@
 		BF6107C326329A2700FF485E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				BF40C6A92633F90E007A2A4D /* APIService.swift */,
 				BF6107C426329A3200FF485E /* NewsService.swift */,
 			);
 			path = Service;
@@ -216,6 +228,33 @@
 				BF6107D02633116600FF485E /* ResultState.swift */,
 			);
 			path = States;
+			sourceTree = "<group>";
+		};
+		BF7A37122637FA1F003DB437 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				BF40C6A92633F90E007A2A4D /* APIService.swift */,
+				BF0C999A26331E56005DCDA6 /* MyView.swift */,
+				BF7CF65B264646F300F6C9D2 /* HomeView2.swift */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		BF7A37132637FA2D003DB437 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BF6107792632977000FF485E /* LilNewsApp.swift */,
+				BF61077D2632977300FF485E /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		BF7CF6582646455C00F6C9D2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BF7CF6592646456800F6C9D2 /* SFSymbols.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,17 +392,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7CF6572646453500F6C9D2 /* SettingsView.swift in Sources */,
 				BF6107D12633116600FF485E /* ResultState.swift in Sources */,
+				BF7CF655264644FC00F6C9D2 /* MainView.swift in Sources */,
+				BF7CF65C264646F300F6C9D2 /* HomeView2.swift in Sources */,
 				BF6107C526329A3200FF485E /* NewsService.swift in Sources */,
 				BF0C999B26331E56005DCDA6 /* MyView.swift in Sources */,
-				BF61077C2632977000FF485E /* ContentView.swift in Sources */,
+				BF61077C2632977000FF485E /* HomeView.swift in Sources */,
 				BF61077A2632977000FF485E /* LilNewsApp.swift in Sources */,
 				BF6107AB2632979F00FF485E /* NewsResponse.swift in Sources */,
 				BF6107B92632995100FF485E /* APIError.swift in Sources */,
 				BF6107B3263297EE00FF485E /* NewsEndPoint.swift in Sources */,
 				BF0C999626331DCE005DCDA6 /* ArticleView.swift in Sources */,
 				BF0C99882633120D005DCDA6 /* NewsViewModel.swift in Sources */,
+				BF7CF65A2646456800F6C9D2 /* SFSymbols.swift in Sources */,
 				BF40C6AA2633F90E007A2A4D /* APIService.swift in Sources */,
+				BF7CF6532646400B00F6C9D2 /* SFSafariView.swift in Sources */,
 				BF0C99A02633D3CC005DCDA6 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
