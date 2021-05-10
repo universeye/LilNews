@@ -12,6 +12,9 @@ struct SettingsView: View {
     
     @Binding var darkModeEnabled: Bool
     @Binding var systemThemeEnabled: Bool
+    
+    @State var isShowOnboarding = false
+    
     var body: some View {
         NavigationView {
             Form {
@@ -29,6 +32,7 @@ struct SettingsView: View {
                         SystemThemeManager.shared.handleTheme(darkMode: darkModeEnabled, system: systemThemeEnabled)
                     })
                 }
+                
                 
                 Section {
                     Link(destination: URL(string: Constants.twitter)!, label: {
@@ -54,10 +58,24 @@ struct SettingsView: View {
                 .foregroundColor(Theme.textColor)
                 .font(.system(size: 16, weight: .semibold))
                 
+                Section(header: Text("Developer")) {
+                    Button(action: {
+                        isShowOnboarding = true
+                    }, label: {
+                        Text("Show onboarding screen")
+                    })
+                }
                 
             }
             .navigationTitle("Settings")
         }
+        .fullScreenCover(isPresented: $isShowOnboarding, content: {
+            let plistManager = PlistManagerImpl()
+            let onBoardingContentManager = OnboardingContentManagerImpl(manager: plistManager)
+            OnboardingScreenViewq(manager: onBoardingContentManager) {
+                isShowOnboarding = false
+            }
+        })
     }
 
 }

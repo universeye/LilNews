@@ -11,7 +11,7 @@ struct MainView: View {
     
     @AppStorage("darkModeEnabled") private var darkModeEnabled = false
     @AppStorage("systemThemeEnabled") private var systemThemeEnabled  = false
-    
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
     var body: some View {
         TabView {
             HomeView()
@@ -29,6 +29,13 @@ struct MainView: View {
         .onAppear {
             SystemThemeManager.shared.handleTheme(darkMode: darkModeEnabled, system: systemThemeEnabled)
         }
+        .fullScreenCover(isPresented: .constant(!hasSeenOnboarding), content: {
+            let plistManager = PlistManagerImpl()
+            let onBoardingContentManager = OnboardingContentManagerImpl(manager: plistManager)
+            OnboardingScreenViewq(manager: onBoardingContentManager) {
+                hasSeenOnboarding = true
+            }
+        })
     }
 }
 

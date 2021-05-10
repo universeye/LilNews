@@ -12,6 +12,12 @@
 		BF0C999626331DCE005DCDA6 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C999526331DCE005DCDA6 /* ArticleView.swift */; };
 		BF0C999B26331E56005DCDA6 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C999A26331E56005DCDA6 /* MyView.swift */; };
 		BF0C99A02633D3CC005DCDA6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C999F2633D3CC005DCDA6 /* ErrorView.swift */; };
+		BF18F5A126496FD50047EFFC /* OnboardingScreenViewq.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F59B26496FD50047EFFC /* OnboardingScreenViewq.swift */; };
+		BF18F5A226496FD50047EFFC /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F59C26496FD50047EFFC /* PlistManager.swift */; };
+		BF18F5A326496FD50047EFFC /* OnboardingContentPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF18F59D26496FD50047EFFC /* OnboardingContentPlist.plist */; };
+		BF18F5A426496FD50047EFFC /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F59E26496FD50047EFFC /* OnboardingItem.swift */; };
+		BF18F5A526496FD50047EFFC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F59F26496FD50047EFFC /* OnboardingView.swift */; };
+		BF18F5A626496FD50047EFFC /* OnboardingContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F5A026496FD50047EFFC /* OnboardingContentManager.swift */; };
 		BF40C6AA2633F90E007A2A4D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40C6A92633F90E007A2A4D /* APIService.swift */; };
 		BF61077A2632977000FF485E /* LilNewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6107792632977000FF485E /* LilNewsApp.swift */; };
 		BF61077C2632977000FF485E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61077B2632977000FF485E /* HomeView.swift */; };
@@ -55,6 +61,12 @@
 		BF0C999526331DCE005DCDA6 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		BF0C999A26331E56005DCDA6 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		BF0C999F2633D3CC005DCDA6 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		BF18F59B26496FD50047EFFC /* OnboardingScreenViewq.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingScreenViewq.swift; sourceTree = "<group>"; };
+		BF18F59C26496FD50047EFFC /* PlistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
+		BF18F59D26496FD50047EFFC /* OnboardingContentPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OnboardingContentPlist.plist; sourceTree = "<group>"; };
+		BF18F59E26496FD50047EFFC /* OnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
+		BF18F59F26496FD50047EFFC /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BF18F5A026496FD50047EFFC /* OnboardingContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentManager.swift; sourceTree = "<group>"; };
 		BF40C6A92633F90E007A2A4D /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		BF6107762632977000FF485E /* LilNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LilNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6107792632977000FF485E /* LilNewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilNewsApp.swift; sourceTree = "<group>"; };
@@ -116,6 +128,19 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BF18F59A26496FC10047EFFC /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BF18F59B26496FD50047EFFC /* OnboardingScreenViewq.swift */,
+				BF18F59F26496FD50047EFFC /* OnboardingView.swift */,
+				BF18F59E26496FD50047EFFC /* OnboardingItem.swift */,
+				BF18F59C26496FD50047EFFC /* PlistManager.swift */,
+				BF18F5A026496FD50047EFFC /* OnboardingContentManager.swift */,
+				BF18F59D26496FD50047EFFC /* OnboardingContentPlist.plist */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		BF61076D2632977000FF485E = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +164,7 @@
 		BF6107782632977000FF485E /* LilNews */ = {
 			isa = PBXGroup;
 			children = (
+				BF18F59A26496FC10047EFFC /* Onboarding */,
 				BF7CF65F2648F1C000F6C9D2 /* Theme */,
 				BF7CF6582646455C00F6C9D2 /* Utilities */,
 				BF0C9986263311F8005DCDA6 /* ViewModel */,
@@ -382,6 +408,7 @@
 			files = (
 				BF6107812632977300FF485E /* Preview Assets.xcassets in Resources */,
 				BF61077E2632977300FF485E /* Assets.xcassets in Resources */,
+				BF18F5A326496FD50047EFFC /* OnboardingContentPlist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,14 +443,19 @@
 				BF61077A2632977000FF485E /* LilNewsApp.swift in Sources */,
 				BF6107AB2632979F00FF485E /* NewsResponse.swift in Sources */,
 				BF6107B92632995100FF485E /* APIError.swift in Sources */,
+				BF18F5A626496FD50047EFFC /* OnboardingContentManager.swift in Sources */,
 				BF6107B3263297EE00FF485E /* NewsEndPoint.swift in Sources */,
 				BF7CF65E2647E70C00F6C9D2 /* Constant.swift in Sources */,
 				BF0C999626331DCE005DCDA6 /* ArticleView.swift in Sources */,
+				BF18F5A426496FD50047EFFC /* OnboardingItem.swift in Sources */,
 				BF0C99882633120D005DCDA6 /* NewsViewModel.swift in Sources */,
 				BF7CF65A2646456800F6C9D2 /* SFSymbols.swift in Sources */,
+				BF18F5A226496FD50047EFFC /* PlistManager.swift in Sources */,
 				BF40C6AA2633F90E007A2A4D /* APIService.swift in Sources */,
 				BF7CF6532646400B00F6C9D2 /* SFSafariView.swift in Sources */,
+				BF18F5A126496FD50047EFFC /* OnboardingScreenViewq.swift in Sources */,
 				BF7CF6612648F1D700F6C9D2 /* SystemThemeManager.swift in Sources */,
+				BF18F5A526496FD50047EFFC /* OnboardingView.swift in Sources */,
 				BF0C99A02633D3CC005DCDA6 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

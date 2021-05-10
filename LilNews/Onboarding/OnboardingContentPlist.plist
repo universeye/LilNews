@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Bookmark</string>
+		<key>content</key>
+		<string>Bookmark your favorite items and view them later</string>
+		<key>sfSymbol</key>
+		<string>bookmark</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Customize</string>
+		<key>content</key>
+		<string>Configure amd change the view to your liking</string>
+		<key>sfSymbol</key>
+		<string>gearshape</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Support</string>
+		<key>content</key>
+		<string>Show the developer some love since it&apos;s a single developer💕</string>
+		<key>sfSymbol</key>
+		<string>heart</string>
+	</dict>
+</array>
+</plist>
