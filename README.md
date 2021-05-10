@@ -39,6 +39,7 @@ SwiftUI, A news app, follow the courses by [tundsdev](https://twitter.com/tundsd
 
 ### To-Do
 * Pull to refresh in SwiftUI
+* Onboarding screen when first open the app
 
 
 # Source
