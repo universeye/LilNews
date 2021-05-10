@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @AppStorage("darkModeEnabled") private var darkModeEnabled = false
+    @AppStorage("systemThemeEnabled") private var systemThemeEnabled  = false
+    
     var body: some View {
         TabView {
             HomeView()
@@ -16,11 +20,14 @@ struct MainView: View {
                     Text("News")
                 }
             
-            SettingsView()
+            SettingsView(darkModeEnabled: $darkModeEnabled, systemThemeEnabled: $systemThemeEnabled)
                 .tabItem {
                     SFSymbols.settings
                     Text("Settings")
                 }
+        }
+        .onAppear {
+            SystemThemeManager.shared.handleTheme(darkMode: darkModeEnabled, system: systemThemeEnabled)
         }
     }
 }

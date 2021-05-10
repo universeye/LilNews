@@ -43,7 +43,7 @@ struct ArticleView: View {
             
             VStack (alignment: .leading, spacing: 4) {
                 Text(articles.title)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(Theme.textColor)
                     .font(.system(size: 18, weight: .semibold))
                     .truncationMode(.tail)
                     .minimumScaleFactor(0.9)

@@ -29,6 +29,8 @@
 		BF7CF6572646453500F6C9D2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6562646453500F6C9D2 /* SettingsView.swift */; };
 		BF7CF65A2646456800F6C9D2 /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6592646456800F6C9D2 /* SFSymbols.swift */; };
 		BF7CF65C264646F300F6C9D2 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF65B264646F300F6C9D2 /* HomeView2.swift */; };
+		BF7CF65E2647E70C00F6C9D2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF65D2647E70C00F6C9D2 /* Constant.swift */; };
+		BF7CF6612648F1D700F6C9D2 /* SystemThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6602648F1D700F6C9D2 /* SystemThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		BF7CF6562646453500F6C9D2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BF7CF6592646456800F6C9D2 /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
 		BF7CF65B264646F300F6C9D2 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
+		BF7CF65D2647E70C00F6C9D2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		BF7CF6602648F1D700F6C9D2 /* SystemThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemThemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 		BF6107782632977000FF485E /* LilNews */ = {
 			isa = PBXGroup;
 			children = (
+				BF7CF65F2648F1C000F6C9D2 /* Theme */,
 				BF7CF6582646455C00F6C9D2 /* Utilities */,
 				BF0C9986263311F8005DCDA6 /* ViewModel */,
 				BF6107CF2633115400FF485E /* States */,
@@ -253,8 +258,17 @@
 			isa = PBXGroup;
 			children = (
 				BF7CF6592646456800F6C9D2 /* SFSymbols.swift */,
+				BF7CF65D2647E70C00F6C9D2 /* Constant.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BF7CF65F2648F1C000F6C9D2 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				BF7CF6602648F1D700F6C9D2 /* SystemThemeManager.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,11 +417,13 @@
 				BF6107AB2632979F00FF485E /* NewsResponse.swift in Sources */,
 				BF6107B92632995100FF485E /* APIError.swift in Sources */,
 				BF6107B3263297EE00FF485E /* NewsEndPoint.swift in Sources */,
+				BF7CF65E2647E70C00F6C9D2 /* Constant.swift in Sources */,
 				BF0C999626331DCE005DCDA6 /* ArticleView.swift in Sources */,
 				BF0C99882633120D005DCDA6 /* NewsViewModel.swift in Sources */,
 				BF7CF65A2646456800F6C9D2 /* SFSymbols.swift in Sources */,
 				BF40C6AA2633F90E007A2A4D /* APIService.swift in Sources */,
 				BF7CF6532646400B00F6C9D2 /* SFSafariView.swift in Sources */,
+				BF7CF6612648F1D700F6C9D2 /* SystemThemeManager.swift in Sources */,
 				BF0C99A02633D3CC005DCDA6 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
