@@ -10,8 +10,8 @@ import SwiftUI
 struct OnboardingScreenViewq: View {
    
     
-    let manager: OnboardingContentManager
-    let handler: OnboardingAction
+    private let manager: OnboardingContentManager
+    private let handler: OnboardingAction
     @State private var selected = 0
     
     init(manager: OnboardingContentManager, handler: @escaping OnboardingAction) {
@@ -22,7 +22,7 @@ struct OnboardingScreenViewq: View {
     var body: some View {
         TabView(selection: $selected) {
             ForEach(manager.items.indices) { index in
-                OnboardingView(item: manager.items[index], limit: manager.limit, index: $selected, handler: handler)
+                OnboardingCardView(item: manager.items[index], limit: manager.limit, index: $selected, handler: handler)
             }
         }
         

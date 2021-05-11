@@ -15,8 +15,8 @@ struct HomeView: View {
         NavigationView {
             Group {
                 switch viewModel.state {
-//                case .loading:
-//                    ProgressView()
+                case .loading:
+                    ProgressView()
                 case .failed(let error):
                     ErrorView(error: error, handler: viewModel.getArticles)
 //                case .success(let articles):
@@ -26,17 +26,25 @@ struct HomeView: View {
 //                        }
 //                    }
                 default:
-                    List(viewModel.isLoading ? NewsResponse.testArticles : viewModel.articles, id: \.self) { article in
-                        ArticleView(articles: article, isLoading: viewModel.isLoading)
+                    GeometryReader { geo in
+                        RefreshScrollView(width: geo.size.width, height: geo.size.height, viewModel: viewModel)
+                        
                     }
                 }
             }
-            .listStyle(PlainListStyle())
             .navigationTitle("News")
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Refresh") {
+                        viewModel.getArticles()
+                    }
+                }
+            })
+            
         }
-        .onAppear {
-            viewModel.getArticles()
-        }
+//        .onAppear {
+//            viewModel.getArticles()
+//        }
     }
 }
 

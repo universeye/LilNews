@@ -13,7 +13,8 @@ struct SettingsView: View {
     @Binding var darkModeEnabled: Bool
     @Binding var systemThemeEnabled: Bool
     
-    @State var isShowOnboarding = false
+    @State private var isShowOnboarding = false
+    @State private var isShowErrorView = false
     
     var body: some View {
         NavigationView {
@@ -64,6 +65,11 @@ struct SettingsView: View {
                     }, label: {
                         Text("Show onboarding screen")
                     })
+                    Button(action: {
+                        isShowErrorView = true
+                    }, label: {
+                        Text("Show error screen")
+                    })
                 }
                 
             }
@@ -75,6 +81,11 @@ struct SettingsView: View {
             OnboardingScreenViewq(manager: onBoardingContentManager) {
                 isShowOnboarding = false
             }
+        })
+        .fullScreenCover(isPresented: $isShowErrorView, content: {
+            ErrorView(error: APIError.decodingEror, handler: {
+                isShowErrorView = false
+            })
         })
     }
 

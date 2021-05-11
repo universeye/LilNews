@@ -16,8 +16,10 @@
 		BF18F5A226496FD50047EFFC /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F59C26496FD50047EFFC /* PlistManager.swift */; };
 		BF18F5A326496FD50047EFFC /* OnboardingContentPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF18F59D26496FD50047EFFC /* OnboardingContentPlist.plist */; };
 		BF18F5A426496FD50047EFFC /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F59E26496FD50047EFFC /* OnboardingItem.swift */; };
-		BF18F5A526496FD50047EFFC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F59F26496FD50047EFFC /* OnboardingView.swift */; };
+		BF18F5A526496FD50047EFFC /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F59F26496FD50047EFFC /* OnboardingCardView.swift */; };
 		BF18F5A626496FD50047EFFC /* OnboardingContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F5A026496FD50047EFFC /* OnboardingContentManager.swift */; };
+		BF18F5A9264A23420047EFFC /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F5A8264A23420047EFFC /* ListingView.swift */; };
+		BF18F5AB264A238C0047EFFC /* RefreshScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18F5AA264A238C0047EFFC /* RefreshScrollView.swift */; };
 		BF40C6AA2633F90E007A2A4D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40C6A92633F90E007A2A4D /* APIService.swift */; };
 		BF61077A2632977000FF485E /* LilNewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6107792632977000FF485E /* LilNewsApp.swift */; };
 		BF61077C2632977000FF485E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61077B2632977000FF485E /* HomeView.swift */; };
@@ -65,8 +67,10 @@
 		BF18F59C26496FD50047EFFC /* PlistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
 		BF18F59D26496FD50047EFFC /* OnboardingContentPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OnboardingContentPlist.plist; sourceTree = "<group>"; };
 		BF18F59E26496FD50047EFFC /* OnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
-		BF18F59F26496FD50047EFFC /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BF18F59F26496FD50047EFFC /* OnboardingCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
 		BF18F5A026496FD50047EFFC /* OnboardingContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentManager.swift; sourceTree = "<group>"; };
+		BF18F5A8264A23420047EFFC /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
+		BF18F5AA264A238C0047EFFC /* RefreshScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshScrollView.swift; sourceTree = "<group>"; };
 		BF40C6A92633F90E007A2A4D /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		BF6107762632977000FF485E /* LilNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LilNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6107792632977000FF485E /* LilNewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilNewsApp.swift; sourceTree = "<group>"; };
@@ -132,13 +136,22 @@
 			isa = PBXGroup;
 			children = (
 				BF18F59B26496FD50047EFFC /* OnboardingScreenViewq.swift */,
-				BF18F59F26496FD50047EFFC /* OnboardingView.swift */,
+				BF18F59F26496FD50047EFFC /* OnboardingCardView.swift */,
 				BF18F59E26496FD50047EFFC /* OnboardingItem.swift */,
 				BF18F59C26496FD50047EFFC /* PlistManager.swift */,
 				BF18F5A026496FD50047EFFC /* OnboardingContentManager.swift */,
 				BF18F59D26496FD50047EFFC /* OnboardingContentPlist.plist */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BF18F5A7264A227B0047EFFC /* PullToTRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				BF18F5A8264A23420047EFFC /* ListingView.swift */,
+				BF18F5AA264A238C0047EFFC /* RefreshScrollView.swift */,
+			);
+			path = PullToTRefresh;
 			sourceTree = "<group>";
 		};
 		BF61076D2632977000FF485E = {
@@ -164,6 +177,7 @@
 		BF6107782632977000FF485E /* LilNews */ = {
 			isa = PBXGroup;
 			children = (
+				BF18F5A7264A227B0047EFFC /* PullToTRefresh */,
 				BF18F59A26496FC10047EFFC /* Onboarding */,
 				BF7CF65F2648F1C000F6C9D2 /* Theme */,
 				BF7CF6582646455C00F6C9D2 /* Utilities */,
@@ -442,6 +456,7 @@
 				BF61077C2632977000FF485E /* HomeView.swift in Sources */,
 				BF61077A2632977000FF485E /* LilNewsApp.swift in Sources */,
 				BF6107AB2632979F00FF485E /* NewsResponse.swift in Sources */,
+				BF18F5AB264A238C0047EFFC /* RefreshScrollView.swift in Sources */,
 				BF6107B92632995100FF485E /* APIError.swift in Sources */,
 				BF18F5A626496FD50047EFFC /* OnboardingContentManager.swift in Sources */,
 				BF6107B3263297EE00FF485E /* NewsEndPoint.swift in Sources */,
@@ -449,13 +464,14 @@
 				BF0C999626331DCE005DCDA6 /* ArticleView.swift in Sources */,
 				BF18F5A426496FD50047EFFC /* OnboardingItem.swift in Sources */,
 				BF0C99882633120D005DCDA6 /* NewsViewModel.swift in Sources */,
+				BF18F5A9264A23420047EFFC /* ListingView.swift in Sources */,
 				BF7CF65A2646456800F6C9D2 /* SFSymbols.swift in Sources */,
 				BF18F5A226496FD50047EFFC /* PlistManager.swift in Sources */,
 				BF40C6AA2633F90E007A2A4D /* APIService.swift in Sources */,
 				BF7CF6532646400B00F6C9D2 /* SFSafariView.swift in Sources */,
 				BF18F5A126496FD50047EFFC /* OnboardingScreenViewq.swift in Sources */,
 				BF7CF6612648F1D700F6C9D2 /* SystemThemeManager.swift in Sources */,
-				BF18F5A526496FD50047EFFC /* OnboardingView.swift in Sources */,
+				BF18F5A526496FD50047EFFC /* OnboardingCardView.swift in Sources */,
 				BF0C99A02633D3CC005DCDA6 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

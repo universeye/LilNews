@@ -55,6 +55,8 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
 
     }
     
+    
+    //another method of api calls
     func getNews() {
         let urlstringg = "https://api.lil.software/news"
         let apiService = APIService.shared

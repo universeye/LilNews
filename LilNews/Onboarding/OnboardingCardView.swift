@@ -10,12 +10,12 @@ import SwiftUI
 typealias OnboardingAction = () -> Void
 
 
-struct OnboardingView: View {
+struct OnboardingCardView: View {
     
-    let item: OnboardingItem
+    private let item: OnboardingItem
     
-    let limit: Int
-    let handler: OnboardingAction
+    private let limit: Int
+    private let handler: OnboardingAction
     @Binding var index: Int
     
     @Environment(\.presentationMode) private var presentationMode
@@ -71,6 +71,6 @@ struct OnboardingView: View {
 
 struct OnboardingVew_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView(item: OnboardingItem(title: "Dummy", content: "Dummy Content", sfSymbol: "heart"), limit: 0, index: .constant(0)) {}
+        OnboardingCardView(item: OnboardingItem(title: "Dummy", content: "Dummy Content", sfSymbol: "heart"), limit: 0, index: .constant(0)) {}
     }
 }

@@ -11,9 +11,7 @@ import UIKit
 class SystemThemeManager {
     static let shared = SystemThemeManager()
     
-    private init() {
-        
-    }
+    private init() {}
     
     func handleTheme(darkMode: Bool, system: Bool) {
         
