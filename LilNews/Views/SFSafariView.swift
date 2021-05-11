@@ -11,12 +11,13 @@ import SafariServices
 struct SFSafariView: UIViewControllerRepresentable {
     
     
+    
     typealias UIViewControllerType = SFSafariViewController
-    let url: URL
+    var url: URL
     
     func makeUIViewController(context: Context) -> SFSafariViewController {
         let vc = SFSafariViewController(url: url)
-        
+        vc.preferredControlTintColor = UIColor(named: "tintColor")
         return vc
     }
     
@@ -26,6 +27,6 @@ struct SFSafariView: UIViewControllerRepresentable {
 
 struct SFSafariView_Previews: PreviewProvider {
     static var previews: some View {
-        SFSafariView(url: URL(string: "www.apple.com.tw")!)
+        SFSafariView(url: URL(string: "www.google.com")!)
     }
 }

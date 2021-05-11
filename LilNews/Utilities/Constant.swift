@@ -17,4 +17,5 @@ enum Constants {
 
 enum Theme {
     static let textColor = Color("textColor")
+    static let tintColor = Color("tintColor")
 }

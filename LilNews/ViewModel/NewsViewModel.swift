@@ -18,8 +18,6 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
     var isLoading: Bool {
         state == .loading
     }
-    
-    
     private let service: NewsService
     
     private(set) var articles = [NewsResponse.Articles]()
@@ -34,7 +32,6 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
         print("perform NewsViewModelImpl.getArticles")
         print("Loading...")
         self.state = .loading
-        
         let cancellable = service.request(from: .getNews)
             .sink { (res) in
                 switch res {

@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct LilNewsApp: App {
+//
+//    init() {
+//        UINavigationBar.appearance().tintColor = .systemGreen
+//    }
     var body: some Scene {
         WindowGroup {
             MainView()

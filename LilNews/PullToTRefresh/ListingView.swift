@@ -24,6 +24,6 @@ struct ListingView: View {
 
 struct ListingView_Previews: PreviewProvider {
     static var previews: some View {
-        ListingView(viewModel: NewsViewModelImpl(service: NewsServiceImpl())).environmentObject(NewsViewModelImpl(service: NewsServiceImpl()))
+        ListingView(viewModel: NewsViewModelImpl(service: NewsServiceImpl()))
     }
 }

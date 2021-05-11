@@ -28,7 +28,6 @@ struct HomeView: View {
                 default:
                     GeometryReader { geo in
                         RefreshScrollView(width: geo.size.width, height: geo.size.height, viewModel: viewModel)
-                        
                     }
                 }
             }
@@ -42,9 +41,9 @@ struct HomeView: View {
             })
             
         }
-//        .onAppear {
-//            viewModel.getArticles()
-//        }
+        .onAppear {
+            viewModel.getArticles()
+        }
     }
 }
 
