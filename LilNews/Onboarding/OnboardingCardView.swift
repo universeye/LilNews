@@ -57,7 +57,7 @@ struct OnboardingCardView: View {
             .foregroundColor(.white)
             .padding(.horizontal, 15)
             .padding(.vertical, 10)
-            .background(Color.blue)
+            .background(Theme.tintColor)
             .clipShape(Capsule())
             .padding(.top, 50)
             .opacity(index == limit ? 1 : 0)

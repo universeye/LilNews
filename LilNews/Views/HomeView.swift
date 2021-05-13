@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel = NewsViewModelImpl(service: NewsServiceImpl())
+    @State private var con = 1
     
     var body: some View {
         NavigationView {
@@ -19,12 +20,6 @@ struct HomeView: View {
                     ProgressView()
                 case .failed(let error):
                     ErrorView(error: error, handler: viewModel.getArticles)
-//                case .success(let articles):
-//                    List {
-//                        ForEach(articles, id: \.self) { article in
-//                            ArticleView(articles: article)
-//                        }
-//                    }
                 default:
                     GeometryReader { geo in
                         RefreshScrollView(width: geo.size.width, height: geo.size.height, viewModel: viewModel)
@@ -39,11 +34,16 @@ struct HomeView: View {
                     }
                 }
             })
-            
         }
         .onAppear {
-            viewModel.getArticles()
+            if con == 1 {
+                viewModel.getArticles()
+                con += 1
+            }
         }
+        
+        
+        
     }
 }
 

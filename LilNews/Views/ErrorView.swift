@@ -45,7 +45,7 @@ struct ErrorView: View {
             })
             .padding(.vertical, 12)
             .padding(.horizontal, 30)
-            .background(Color.blue, alignment: .center)
+            .background(Theme.tintColor, alignment: .center)
             .foregroundColor(.white)
             .font(.system(size: 15, weight: .heavy))
             .cornerRadius(10)

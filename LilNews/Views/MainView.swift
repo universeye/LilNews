@@ -4,6 +4,11 @@
 //
 //  Created by Terry Kuo on 2021/5/8.
 //
+///Bugs -
+///fix reloading everytime after entering settings
+///refactor scrollView
+///error screen & onboarding button tint color to match
+//////////
 
 import SwiftUI
 

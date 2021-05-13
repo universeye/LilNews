@@ -15,28 +15,11 @@ struct ArticleView: View {
     @State var isLoading: Bool
     
     var body: some View {
+        
         HStack(spacing: 10) {
             
             if let imgURL = articles.image {
-                URLImage(url: imgURL,
-                         options: URLImageOptions(
-                            //identifier: articles.id.uuidString,
-                            cachePolicy: .returnCacheElseLoad(cacheDelay: nil, downloadDelay: 0.25)),
-                         failure: { error, retry in         // Display error and retry button
-                            VStack {
-                                placeHolderImageView()
-                                Text(error.localizedDescription)
-                                Button("Retry", action: retry)
-                            }
-                         },
-                         content: { (imagess) in
-                            imagess
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                            
-                         })
-                    .frame(width: 100, height: 100)
-                    .cornerRadius(10)
+                MainImageView(imgURL: imgURL)
             } else {
                 placeHolderImageView()
             }
@@ -85,12 +68,46 @@ struct ArticleView_Previews: PreviewProvider {
 }
 
 
+
+struct MainImageView: View {
+    
+    var imgURL: URL
+    
+    var body: some View {
+        URLImage(url: imgURL,
+                 options: URLImageOptions(
+                    //identifier: articles.id.uuidString,
+                    cachePolicy: .returnCacheElseLoad(cacheDelay: nil, downloadDelay: 0.25)),
+                 failure: { error, retry in         // Display error and retry button
+                    VStack {
+                        placeHolderImageView()
+                        Text(error.localizedDescription)
+                        Button("Retry", action: retry)
+                    }
+                 },
+                 content: { (imagess) in
+                    imagess
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                    
+                 })
+            .frame(width: 100, height: 100)
+            .cornerRadius(10)
+    }
+}
+
+
 struct placeHolderImageView: View {
     var body: some View {
         VStack {
-            SFSymbols.placeholderImage
+            //SFSymbols.placeholderImage
+            Image(systemName: "photo.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 50, height: 50, alignment: .center)
                 .foregroundColor(.white)
                 .background(Color.gray)
+                .cornerRadius(5)
                 .frame(width: 100, height: 100)
         }
     }

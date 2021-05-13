@@ -10,6 +10,7 @@ import SwiftUI
 struct ListingView: View {
     
     @StateObject var viewModel = NewsViewModelImpl(service: NewsServiceImpl())
+    @State private var con = 1
     
     var body: some View {
         List(viewModel.isLoading ? NewsResponse.testArticles : viewModel.articles, id: \.self) { article in
@@ -17,7 +18,10 @@ struct ListingView: View {
         }
         .listStyle(PlainListStyle())
         .onAppear {
-            viewModel.getArticles()
+            if con == 1 {
+                viewModel.getArticles()
+                con += 1
+            }
         }
     }
 }
