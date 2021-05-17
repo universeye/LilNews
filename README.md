@@ -16,9 +16,9 @@ SwiftUI, A news app, follow the courses by [tundsdev](https://twitter.com/tundsd
 
 <img src= "ReadmeSources/newsSS.png" width = 40% height = 40%>  <img src= "ReadmeSources/settingsSS.png" width = 40% height = 40%>
 
+* Onboarding Screen:
 
-<img src= "ReadmeSources/Darkmode.png" width = 40% height = 40%>  <img src= "ReadmeSources/placeholderSS.png" width = 40% height = 40%>
-
+<img src= "ReadmeSources/onboardingSS.png" width = 40% height = 40%>
 
 * Custom alert View &nbsp;
 
@@ -32,9 +32,10 @@ SwiftUI, A news app, follow the courses by [tundsdev](https://twitter.com/tundsd
 
 * Custom alert view
 * UIKit in SwiftUI(SFSafariView)
-* Placeholder view
+* Placeholder image view
 * Redacted view when loading
 * Adaptive Dark Mode with UserDefaults
+* Environment tint color
 
 
 ### To-Do
