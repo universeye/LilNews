@@ -1,6 +1,6 @@
 # DZ News App
 
-SwiftUI, A news app, follow the courses by [tundsdev](https://twitter.com/tundsdev).
+SwiftUI, A news app, follow the courses by [tundsdev](https://twitter.com/tundsdev), and some features added myself, like pull to refresh, launching splash screen, environment tint color.
 
 
 # Menu
@@ -38,6 +38,7 @@ SwiftUI, A news app, follow the courses by [tundsdev](https://twitter.com/tundsd
 * Environment tint color
 * Pull to refresh in SwiftUI
 * Onboarding screen when first open the app
+* Launching splash screen
 
 ### To-Do
 * Pull to refresh in SwiftUI (**done**)
