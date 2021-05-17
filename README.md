@@ -36,11 +36,12 @@ SwiftUI, A news app, follow the courses by [tundsdev](https://twitter.com/tundsd
 * Redacted view when loading
 * Adaptive Dark Mode with UserDefaults
 * Environment tint color
-
-
-### To-Do
 * Pull to refresh in SwiftUI
 * Onboarding screen when first open the app
+
+### To-Do
+* Pull to refresh in SwiftUI (**done**)
+* Onboarding screen when first open the app (**done**)
 
 
 # Source
