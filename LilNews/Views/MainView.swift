@@ -84,9 +84,9 @@ struct introSplashScreen: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 85, height: 85)
-                .scaleEffect(animate ? 40 : 1)
+                .scaleEffect(animate ? 40 : 0.8)
                 .opacity(animate ? 0.1 : 1)
-                .animation(Animation.easeOut(duration: 0.7))
+                .animation(Animation.spring())
             
         }
         .opacity(showSplash ? 1 : 0)
