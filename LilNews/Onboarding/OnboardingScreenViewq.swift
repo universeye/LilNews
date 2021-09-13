@@ -9,7 +9,6 @@ import SwiftUI
 
 struct OnboardingScreenViewq: View {
    
-    
     private let manager: OnboardingContentManager
     private let handler: OnboardingAction
     @State private var selected = 0

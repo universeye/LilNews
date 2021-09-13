@@ -4,14 +4,6 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>Bookmark</string>
-		<key>content</key>
-		<string>Bookmark your favorite items and view them later</string>
-		<key>sfSymbol</key>
-		<string>bookmark</string>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>Customize</string>
 		<key>content</key>
 		<string>Configure amd change the view to your liking</string>
@@ -20,9 +12,17 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>Feedback</string>
+		<key>content</key>
+		<string>Always welcome to send me feedback of the app!</string>
+		<key>sfSymbol</key>
+		<string>exclamationmark.bubble</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>Support</string>
 		<key>content</key>
-		<string>Show the developer some love since it&apos;s a single developer💕</string>
+		<string>Support me by follow me on Twitter @Argonyoyo 💞</string>
 		<key>sfSymbol</key>
 		<string>heart</string>
 	</dict>

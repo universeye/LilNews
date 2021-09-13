@@ -11,6 +11,7 @@ import SwiftUI
 
 enum Constants {
     static let twitter = "https://twitter.com/ArgonYoYo"
+    static let tundsdev = "https://twitter.com/tundsdev"
     static let email = "mailto:terrykuo501@gmail.com"
     static let phone = "tel:+886912345678"
 }

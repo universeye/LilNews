@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterlogo" translatesAutoresizingMaskIntoConstraints="NO" id="9jU-Tt-7Xv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newsicon1" translatesAutoresizingMaskIntoConstraints="NO" id="9jU-Tt-7Xv">
                                 <rect key="frame" x="164.5" y="412.5" width="85" height="85"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="twitterlogo" width="840" height="859"/>
+        <image name="newsicon1" width="196" height="187"/>
     </resources>
 </document>

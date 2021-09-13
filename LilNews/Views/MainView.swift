@@ -80,12 +80,12 @@ struct introSplashScreen: View {
     var body: some View {
         ZStack {
             Color(color).ignoresSafeArea()
-            Image("twitterlogo")
+            Image("newsicon1")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 85, height: 85)
-                .scaleEffect(animate ? 40 : 0.8)
-                .opacity(animate ? 0.1 : 1)
+                .scaleEffect(animate ? 50 : 1)
+                .opacity(animate ? 0.0 : 1)
                 .animation(Animation.spring())
             
         }
