@@ -20,7 +20,7 @@ struct OnboardingScreenViewq: View {
     
     var body: some View {
         TabView(selection: $selected) {
-            ForEach(manager.items.indices) { index in
+            ForEach(manager.items.indices, id: \.self) { index in
                 OnboardingCardView(item: manager.items[index], limit: manager.limit, index: $selected, handler: handler)
             }
         }

@@ -26,8 +26,6 @@
 		BF61077C2632977000FF485E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61077B2632977000FF485E /* HomeView.swift */; };
 		BF61077E2632977300FF485E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF61077D2632977300FF485E /* Assets.xcassets */; };
 		BF6107812632977300FF485E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6107802632977300FF485E /* Preview Assets.xcassets */; };
-		BF61078C2632977300FF485E /* LilNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61078B2632977300FF485E /* LilNewsTests.swift */; };
-		BF6107972632977300FF485E /* LilNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6107962632977300FF485E /* LilNewsUITests.swift */; };
 		BF6107AB2632979F00FF485E /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6107AA2632979F00FF485E /* NewsResponse.swift */; };
 		BF6107B3263297EE00FF485E /* NewsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6107B2263297EE00FF485E /* NewsEndPoint.swift */; };
 		BF6107B92632995100FF485E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6107B82632995100FF485E /* APIError.swift */; };
@@ -74,17 +72,15 @@
 		BF18F5AA264A238C0047EFFC /* RefreshScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshScrollView.swift; sourceTree = "<group>"; };
 		BF18F5AC264A72740047EFFC /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BF40C6A92633F90E007A2A4D /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		BF6107762632977000FF485E /* LilNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LilNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF6107762632977000FF485E /* DZ News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DZ News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6107792632977000FF485E /* LilNewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilNewsApp.swift; sourceTree = "<group>"; };
 		BF61077B2632977000FF485E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BF61077D2632977300FF485E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF6107802632977300FF485E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF6107822632977300FF485E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF6107872632977300FF485E /* LilNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LilNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF61078B2632977300FF485E /* LilNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilNewsTests.swift; sourceTree = "<group>"; };
 		BF61078D2632977300FF485E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF6107922632977300FF485E /* LilNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LilNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF6107962632977300FF485E /* LilNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilNewsUITests.swift; sourceTree = "<group>"; };
 		BF6107982632977300FF485E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF6107AA2632979F00FF485E /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
 		BF6107B2263297EE00FF485E /* NewsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndPoint.swift; sourceTree = "<group>"; };
@@ -169,7 +165,7 @@
 		BF6107772632977000FF485E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF6107762632977000FF485E /* LilNews.app */,
+				BF6107762632977000FF485E /* DZ News.app */,
 				BF6107872632977300FF485E /* LilNewsTests.xctest */,
 				BF6107922632977300FF485E /* LilNewsUITests.xctest */,
 			);
@@ -210,7 +206,6 @@
 		BF61078A2632977300FF485E /* LilNewsTests */ = {
 			isa = PBXGroup;
 			children = (
-				BF61078B2632977300FF485E /* LilNewsTests.swift */,
 				BF61078D2632977300FF485E /* Info.plist */,
 			);
 			path = LilNewsTests;
@@ -219,7 +214,6 @@
 		BF6107952632977300FF485E /* LilNewsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				BF6107962632977300FF485E /* LilNewsUITests.swift */,
 				BF6107982632977300FF485E /* Info.plist */,
 			);
 			path = LilNewsUITests;
@@ -317,9 +311,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF6107752632977000FF485E /* LilNews */ = {
+		BF6107752632977000FF485E /* DZ News */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF61079B2632977300FF485E /* Build configuration list for PBXNativeTarget "LilNews" */;
+			buildConfigurationList = BF61079B2632977300FF485E /* Build configuration list for PBXNativeTarget "DZ News" */;
 			buildPhases = (
 				BF6107722632977000FF485E /* Sources */,
 				BF6107732632977000FF485E /* Frameworks */,
@@ -329,12 +323,12 @@
 			);
 			dependencies = (
 			);
-			name = LilNews;
+			name = "DZ News";
 			packageProductDependencies = (
 				BF0C999026331D7B005DCDA6 /* URLImage */,
 			);
 			productName = LilNews;
-			productReference = BF6107762632977000FF485E /* LilNews.app */;
+			productReference = BF6107762632977000FF485E /* DZ News.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BF6107862632977300FF485E /* LilNewsTests */ = {
@@ -387,11 +381,9 @@
 					};
 					BF6107862632977300FF485E = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = BF6107752632977000FF485E;
 					};
 					BF6107912632977300FF485E = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = BF6107752632977000FF485E;
 					};
 				};
 			};
@@ -411,7 +403,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF6107752632977000FF485E /* LilNews */,
+				BF6107752632977000FF485E /* DZ News */,
 				BF6107862632977300FF485E /* LilNewsTests */,
 				BF6107912632977300FF485E /* LilNewsUITests */,
 			);
@@ -484,7 +476,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF61078C2632977300FF485E /* LilNewsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +483,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF6107972632977300FF485E /* LilNewsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,12 +491,12 @@
 /* Begin PBXTargetDependency section */
 		BF6107892632977300FF485E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF6107752632977000FF485E /* LilNews */;
+			target = BF6107752632977000FF485E /* DZ News */;
 			targetProxy = BF6107882632977300FF485E /* PBXContainerItemProxy */;
 		};
 		BF6107942632977300FF485E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF6107752632977000FF485E /* LilNews */;
+			target = BF6107752632977000FF485E /* DZ News */;
 			targetProxy = BF6107932632977300FF485E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -563,7 +553,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -618,7 +608,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -635,16 +625,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LilNews/Preview Content\"";
-				DEVELOPMENT_TEAM = 9T3DK8DFL5;
+				DEVELOPMENT_TEAM = N492VC6PS9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LilNews/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dzhiphop.LilNews;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.terrykuo.dznews;
+				PRODUCT_NAME = "DZ News";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -657,16 +648,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LilNews/Preview Content\"";
-				DEVELOPMENT_TEAM = 9T3DK8DFL5;
+				DEVELOPMENT_TEAM = N492VC6PS9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LilNews/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dzhiphop.LilNews;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.terrykuo.dznews;
+				PRODUCT_NAME = "DZ News";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -676,9 +668,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9T3DK8DFL5;
+				DEVELOPMENT_TEAM = N492VC6PS9;
 				INFOPLIST_FILE = LilNewsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -690,7 +681,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LilNews.app/LilNews";
 			};
 			name = Debug;
 		};
@@ -698,9 +688,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9T3DK8DFL5;
+				DEVELOPMENT_TEAM = N492VC6PS9;
 				INFOPLIST_FILE = LilNewsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -712,7 +701,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LilNews.app/LilNews";
 			};
 			name = Release;
 		};
@@ -730,9 +718,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzhiphop.LilNewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LilNews;
 			};
 			name = Debug;
 		};
@@ -750,9 +738,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzhiphop.LilNewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LilNews;
 			};
 			name = Release;
 		};
@@ -768,7 +756,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF61079B2632977300FF485E /* Build configuration list for PBXNativeTarget "LilNews" */ = {
+		BF61079B2632977300FF485E /* Build configuration list for PBXNativeTarget "DZ News" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF61079C2632977300FF485E /* Debug */,

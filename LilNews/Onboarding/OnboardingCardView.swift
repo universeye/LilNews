@@ -62,7 +62,8 @@ struct OnboardingCardView: View {
             .padding(.top, 50)
             .opacity(index == limit ? 1 : 0)
             .allowsHitTesting(index == limit)
-            .animation(.easeInOut(duration: 0.25))
+            .animation(.easeInOut(duration: 0.25), value: index == limit)
+            //.animation(.easeInOut(duration: 0.25))
             
         }
         .padding(.bottom, 150)

@@ -19,7 +19,9 @@ struct MainView: View {
     @AppStorage("systemThemeEnabled") private var systemThemeEnabled  = false
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
     
-    
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.systemBackground
+    }
     @State private var animate: Bool = false
     @State private var showSplash: Bool = true
     
@@ -38,6 +40,7 @@ struct MainView: View {
                         Text("Settings")
                     }
             }
+            
             .accentColor(Theme.tintColor)
             .onAppear {
                 SystemThemeManager.shared.handleTheme(darkMode: darkModeEnabled, system: systemThemeEnabled)
@@ -50,7 +53,7 @@ struct MainView: View {
                 }
             })
             
-            introSplashScreen(animate: $animate, showSplash: $showSplash)
+//            introSplashScreen(animate: $animate, showSplash: $showSplash)
             
         }
         .onAppear{
@@ -86,10 +89,10 @@ struct introSplashScreen: View {
                 .frame(width: 85, height: 85)
                 .scaleEffect(animate ? 50 : 1)
                 .opacity(animate ? 0.0 : 1)
-                .animation(Animation.spring())
+                .animation(Animation.spring(), value: animate)
             
         }
         .opacity(showSplash ? 1 : 0)
-        .animation(Animation.easeOut(duration: 0.8))
+        .animation(Animation.easeOut(duration: 0.8), value: showSplash)
     }
 }

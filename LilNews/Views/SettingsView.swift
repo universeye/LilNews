@@ -14,7 +14,7 @@ struct SettingsView: View {
     
     @State private var isShowOnboarding = false
     @State private var isShowErrorView = false
-    
+    @State var appVersion = ""
     var body: some View {
         NavigationView {
             VStack {
@@ -83,6 +83,22 @@ struct SettingsView: View {
                         //                        }, label: {
                         //                            Text("Show error screen")
                         //                        })
+                        Button(action: {
+                        }, label: {
+                            
+                            HStack {
+                                Text("App Version")
+                                    .foregroundColor(Theme.textColor)
+                                
+                                Spacer()
+                                
+                                Text("\(appVersion)")
+                                    .font(.system(size: 17, weight: .semibold))
+                                    .foregroundColor(Theme.textColor)
+                                    .padding(.horizontal)
+                            }
+                            
+                        })
                     }
                     
                 }
@@ -93,7 +109,9 @@ struct SettingsView: View {
                     .padding(.top, 6)
                     .padding(.bottom, 8)
                     .foregroundColor(Color.secondary)
-                
+                    .onAppear {
+                        self.appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+                    }
             }
             .background(Color("ColorBackground").edgesIgnoringSafeArea(.all))
         }

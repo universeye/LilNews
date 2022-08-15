@@ -4,9 +4,17 @@
 <array>
 	<dict>
 		<key>title</key>
+		<string>Hello</string>
+		<key>content</key>
+		<string>Thank you for trying out this app, enjoy!</string>
+		<key>sfSymbol</key>
+		<string>hand.wave</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>Customize</string>
 		<key>content</key>
-		<string>Configure amd change the view to your liking</string>
+		<string>Configure and change the view to your liking</string>
 		<key>sfSymbol</key>
 		<string>gearshape</string>
 	</dict>

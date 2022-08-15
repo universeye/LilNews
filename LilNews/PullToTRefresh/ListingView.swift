@@ -16,6 +16,9 @@ struct ListingView: View {
         List(viewModel.isLoading ? NewsResponse.testArticles : viewModel.articles, id: \.self) { article in
             ArticleView(articles: article, isLoading: viewModel.isLoading)
         }
+        .refreshable {
+            viewModel.getArticles()
+        }
         .listStyle(PlainListStyle())
         .onAppear {
             if con == 1 {

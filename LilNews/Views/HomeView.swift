@@ -21,19 +21,11 @@ struct HomeView: View {
                 case .failed(let error):
                     ErrorView(error: error, handler: viewModel.getArticles)
                 default:
-                    GeometryReader { geo in
-                        RefreshScrollView(width: geo.size.width, height: geo.size.height, viewModel: viewModel)
-                    }
+                    ListingView()
+                    
                 }
             }
-            .navigationTitle("News")
-            .toolbar(content: {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Refresh") {
-                        viewModel.getArticles()
-                    }
-                }
-            })
+            .navigationTitle("Twendy")
         }
         .onAppear {
             if con == 1 {
