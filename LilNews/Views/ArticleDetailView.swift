@@ -11,6 +11,7 @@ struct ArticleDetailView: View {
     
     let articles: NewsResponse.Articles
     @State private var isShowingSheet = false
+    @State private var isAnimating = false
     
     var body: some View {
         ScrollView {
@@ -24,14 +25,19 @@ struct ArticleDetailView: View {
                             .foregroundColor(.gray)
                             .font(.system(size: 12))
                     }
+                    .opacity(isAnimating ? 1 : 0)
+                    .animation(.easeOut(duration: 0.4).delay(0), value: isAnimating)
                 }
                 Text(articles.title)
                     .font(.system(size: 30, weight: .bold, design: .default))
                     .multilineTextAlignment(.leading)
+                    .opacity(isAnimating ? 1 : 0)
+                    .animation(.easeOut(duration: 0.4).delay(0.25), value: isAnimating)
                 Text(articles.source)
                     .font(.system(size: 15, weight: .medium, design: .default))
                     .foregroundColor(.secondary)
-                
+                    .opacity(isAnimating ? 1 : 0)
+                    .animation(.easeOut(duration: 0.4).delay(0.45), value: isAnimating)
                 
                 AsyncImage(url: articles.image) { image in
                     image
@@ -40,6 +46,7 @@ struct ArticleDetailView: View {
                         .frame(maxWidth: .infinity)
                         .cornerRadius(20)
                         .padding(.vertical)
+                    
                 } placeholder: {
                     Image("demo1")
                         .resizable()
@@ -49,13 +56,20 @@ struct ArticleDetailView: View {
                         .padding(.vertical)
                         .redacted(reason: .placeholder)
                 }
+                
+                
                 Text(articles.description ?? "")
                     .font(.system(size: 17, weight: .regular, design: .default))
+                    .opacity(isAnimating ? 1 : 0)
+                    .animation(.easeOut(duration: 0.4).delay(0.65), value: isAnimating)
                 Button {
                     isShowingSheet.toggle()
+                    
                 } label: {
                     Text("Read More")
                         .underline()
+                        .opacity(isAnimating ? 1 : 0)
+                        .animation(.easeOut(duration: 0.4).delay(0.75), value: isAnimating)
                 }
                 
                 Spacer()
@@ -63,6 +77,11 @@ struct ArticleDetailView: View {
             .padding(.horizontal)
             .navigationBarTitleDisplayMode(.inline)
         }
+        .onAppear(perform: {
+            
+            self.isAnimating = true
+            
+        })
         .sheet(isPresented: $isShowingSheet) {
             SFSafariView(url: articles.url)
                 .ignoresSafeArea()
