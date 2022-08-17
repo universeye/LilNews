@@ -38,6 +38,7 @@
 		BF7CF65C264646F300F6C9D2 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF65B264646F300F6C9D2 /* HomeView2.swift */; };
 		BF7CF65E2647E70C00F6C9D2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF65D2647E70C00F6C9D2 /* Constant.swift */; };
 		BF7CF6612648F1D700F6C9D2 /* SystemThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6602648F1D700F6C9D2 /* SystemThemeManager.swift */; };
+		BFFF86EB28ACC530008E5579 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF86EA28ACC530008E5579 /* ArticleDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		BF7CF65B264646F300F6C9D2 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 		BF7CF65D2647E70C00F6C9D2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BF7CF6602648F1D700F6C9D2 /* SystemThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemThemeManager.swift; sourceTree = "<group>"; };
+		BFFF86EA28ACC530008E5579 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,6 @@
 		BF18F5A7264A227B0047EFFC /* PullToTRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				BF18F5A8264A23420047EFFC /* ListingView.swift */,
 				BF18F5AA264A238C0047EFFC /* RefreshScrollView.swift */,
 			);
 			path = PullToTRefresh;
@@ -225,7 +226,9 @@
 				BF7CF654264644FC00F6C9D2 /* MainView.swift */,
 				BF61077B2632977000FF485E /* HomeView.swift */,
 				BF7CF6562646453500F6C9D2 /* SettingsView.swift */,
+				BF18F5A8264A23420047EFFC /* ListingView.swift */,
 				BF0C999526331DCE005DCDA6 /* ArticleView.swift */,
+				BFFF86EA28ACC530008E5579 /* ArticleDetailView.swift */,
 				BF0C999F2633D3CC005DCDA6 /* ErrorView.swift */,
 				BF7CF6522646400B00F6C9D2 /* SFSafariView.swift */,
 			);
@@ -449,6 +452,7 @@
 				BF7CF65C264646F300F6C9D2 /* HomeView2.swift in Sources */,
 				BF6107C526329A3200FF485E /* NewsService.swift in Sources */,
 				BF0C999B26331E56005DCDA6 /* MyView.swift in Sources */,
+				BFFF86EB28ACC530008E5579 /* ArticleDetailView.swift in Sources */,
 				BF61077C2632977000FF485E /* HomeView.swift in Sources */,
 				BF61077A2632977000FF485E /* LilNewsApp.swift in Sources */,
 				BF6107AB2632979F00FF485E /* NewsResponse.swift in Sources */,

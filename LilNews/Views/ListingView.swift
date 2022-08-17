@@ -14,10 +14,16 @@ struct ListingView: View {
     
     var body: some View {
         List(viewModel.isLoading ? NewsResponse.testArticles : viewModel.articles, id: \.self) { article in
-            ArticleView(articles: article, isLoading: viewModel.isLoading)
+            NavigationLink {
+                ArticleDetailView(articles: article)
+            } label: {
+                ArticleView(articles: article, isLoading: viewModel.isLoading)
+            }
         }
         .refreshable {
             viewModel.getArticles()
+            let impactMed = UIImpactFeedbackGenerator(style: .light)
+            impactMed.impactOccurred()
         }
         .listStyle(PlainListStyle())
         .onAppear {

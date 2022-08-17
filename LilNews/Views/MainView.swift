@@ -13,8 +13,6 @@
 import SwiftUI
 
 struct MainView: View {
-    
-    
     @AppStorage("darkModeEnabled") private var darkModeEnabled = false
     @AppStorage("systemThemeEnabled") private var systemThemeEnabled  = false
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
@@ -53,7 +51,7 @@ struct MainView: View {
                 }
             })
             
-//            introSplashScreen(animate: $animate, showSplash: $showSplash)
+            //            introSplashScreen(animate: $animate, showSplash: $showSplash)
             
         }
         .onAppear{

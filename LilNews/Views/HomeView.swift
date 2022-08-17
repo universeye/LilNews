@@ -22,7 +22,6 @@ struct HomeView: View {
                     ErrorView(error: error, handler: viewModel.getArticles)
                 default:
                     ListingView()
-                    
                 }
             }
             .navigationTitle("Twendy")

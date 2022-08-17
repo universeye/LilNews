@@ -44,16 +44,15 @@ struct ArticleView: View {
                             .foregroundColor(.gray)
                             .font(.system(size: 12))
                     }
-                    
                 }
                 
             }
-            .onTapGesture {
-                isShowingSheet.toggle()
-            }
-            .sheet(isPresented: $isShowingSheet) {
-                SFSafariView(url: articles.url)
-            }
+//            .onTapGesture {
+//                isShowingSheet.toggle()
+//            }
+//            .sheet(isPresented: $isShowingSheet) {
+//                SFSafariView(url: articles.url)
+//            }
         }
         .padding(.horizontal, 10)
         .redacted(reason: isLoading ? .placeholder : [])

@@ -36,9 +36,9 @@ extension NewsResponse {
                                             url: URL(string: "https://static.foxnews.com/foxnews.com/content/uploads/2021/04/Jerry-Jones-Kyle-Pitts-REUTERS-GETTY.jpg")!,
                                             source: "Fox News",
                                             title: "Jerry Jones has 'visions of sugar plums' imagining Kyle Pitts with Cowboys - Fox News",
-                                            description: nil,
+                                            description: "Dallas Cowboys owner Jerry Jones is infatuated with Kyle Pitts. And a video surfaced this week that further proved that initial report.",
                                             image: URL(string: "https://static.foxnews.com/foxnews.com/content/uploads/2021/04/Jerry-Jones-Kyle-Pitts-REUTERS-GETTY.jpg")!,
-                                            date: nil),
+                                            date: Date()),
                                            Articles(
                                             author: nil,
                                             url: URL(string: "https://static.foxnews.com/foxnews.com/content/uploads/2021/04/Jerry-Jones-Kyle-Pitts-REUTERS-GETTY.jpg")!,
